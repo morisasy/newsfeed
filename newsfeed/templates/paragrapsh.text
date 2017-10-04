@@ -1,0 +1,35 @@
+thesitewizard.com: Web design, promotion, CGI, PHP, JavaScript scripting, and revenue earning.
+What is Favicon.ico? Personalise Your Site's Bookmarks
+What is this mysterious FAVICON.ICO in your web server logs?
+
+What is Favicon.ico and How to Create a Favicon Icon for Your Website
+by Christopher Heng, thesitewizard.com
+Some time back, I had an email from a visitor asking me how I managed to have thefreecountry.com's icon displayed next to my web address (or "URL") in his browser's location bar. In fact, had he checked carefully, he would also have noticed that the icon is also used in his "Favorites" menu.
+
+Internet Explorer ("IE") version 5.0 and above have a facility where, if someone bookmarks your website (ie puts it in their "Favorites" menu), it associates a particular icon with your website in the bookmark. It tries to obtain that icon by first requesting for "favicon.ico" from the directory of your web page. If it cannot find such a file, it will try to obtain it from the root directory of your website, failing which, it will simply use a default icon for the bookmark.
+
+On the other hand, the favicon.ico file is available, the icon will also be displayed beside your website name in the "Favorites" menu, the location bar in IE, and if the user opens up the "Favorites" folder, it will be the icon used for the link to your site.
+
+Most, if not all, modern browsers also have the ability to use the favicon.ico file. In fact, many of them also accept the file in other graphics formats, such as the PNG format. These browsers display the "favicon.ico" in the location bar of the browser (the part that shows your website's address or URL).
+
+Software Requirements
+If you have an Windows icon editor (which you may already have if you have a programming language development system for Windows), you're all set.
+
+All is not lost, however, if you do not have one. Simply pop over to thefreecountry.com's Free Resource Editors and Icon Editors page at https://www.thefreecountry.com/programming/resourceeditors.shtml and get yourself one. That page lists a few free icon editors and resource editors. Just choose any of the icon editors that strikes your fancy and download it. Alternatively, you can also download one of the other packages that contain a resource editor. Resource editors are tools that programmers use to create and edit Windows "resources" like icons, cursors (ie, mouse pointers), menus, dialog boxes, etc. For our purpose here, you will only need to use the icon editor portion of such resource editors.
+
+How to Create a "Favicon.ico" File
+Create an image 16X16 pixels in size. Yes, it is really small and you can't really draw much in it. You should also restrict yourself to the standard Windows 16 colours, although I suspect that 256 colours will work fine.
+
+If you like, you can also create a 32X32 pixel icon, which will be scaled to size for the Favorites menu and the location bar. You can even put both 16X16 and 32X32 pixel icons into the same icon file. Windows will use the former for its menus and the latter when the user opens up a folder that is set to display large icons. It's probably not really necessary to do this if you can't be bothered.
+
+Save the image as an ICO file (named "favicon.ico", of course).
+
+Upload it to your website. You don't need to upload one to every directory of your site if you don't want to waste space — simply put it in your root directory and the web browsers that support favicons will apparently locate it eventually. You can also upload it into your images directory, but you will need to modify your web pages if you do. See later in this article for more information on this.
+
+Help! My Web Host Doesn't Allow ICO Files!
+If you use a free web host that does not allow files with the .ICO extension to be uploaded, you might try to work around it by uploading it (in binary mode) with some other extension (like GIF). Once it's on your site, rename it using your FTP program to the correct extension.
+
+Helping the Browser Locate the favicon.ico file
+If you have placed your favicon.ico file in a location other than the current web directory (relative to your web page) or the root directory, you have to help your visitors' browser locate the favicon file by specifying it with a tag like the following in the <head> section of your web page.
+
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
